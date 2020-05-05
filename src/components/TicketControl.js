@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import PropTypes from "prop-types";
 import * as a from './../actions';
 import { withFirestore, isLoaded } from 'react-redux-firebase';
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 class TicketControl extends React.Component {
 
@@ -153,6 +154,7 @@ class TicketControl extends React.Component {
       }
       return (
         <React.Fragment>
+          <p>Welcome!</p>
           {currentlyVisibleState}
           <button onClick={this.handleClick}>{buttonText}</button>
         </React.Fragment>
